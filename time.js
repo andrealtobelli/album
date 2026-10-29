@@ -1,0 +1,1 @@
+export function elapsed(start, now=Date.now()) { const total=Math.max(0,Math.floor((now-new Date(start).getTime())/1000));return [Math.floor(total/86400),Math.floor(total/3600)%24,Math.floor(total/60)%60,total%60]; }
