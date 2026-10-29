@@ -1,6 +1,6 @@
 import {album} from './config.js';import {elapsed} from './time.js';
 const $=s=>document.querySelector(s);
-const art={flower:'<span class="art-flower">✿</span><span class="art-stem"></span>',sun:'<span class="art-sun">☀</span><span class="art-horizon"></span>',heart:'<span class="art-heart">♡</span>',branch:'<span class="art-branch">❧</span>'};
+const art={flower:'<span class="art-flower">✿</span><span class="art-stem"></span>',sun:'<span class="art-sun" aria-hidden="true"><img src="/public/icons/sun.svg" alt=""></span><span class="art-horizon"></span>',heart:'<span class="art-heart">♡</span>',branch:'<span class="art-branch">❧</span>'};
 function picture(container,item){container.replaceChildren();if(item.src){const img=document.createElement('img');img.src=item.src;img.alt=item.alt;img.loading='lazy';container.append(img);}else{container.innerHTML=art[item.art]||art.heart;const label=document.createElement('span');label.className='placeholder-label';label.textContent='espaço para '+(item.alt||'uma foto').toLowerCase();container.append(label);}}
 if(album.cover.src)picture($('#cover-image'),album.cover);
 if(album.title!=='Meu lugar favorito é com você')$('h1').textContent=album.title;
