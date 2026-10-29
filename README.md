@@ -26,3 +26,13 @@ Execute `npm test` e `npm run build`. O resultado fica em `dist/`.
 Se preferir o terminal, execute `npx vercel` na pasta do projeto para uma prévia e `npx vercel --prod` para publicar em produção. O servidor local não precisa ficar ligado para o site publicado funcionar.
 
 O site não tem autenticação: quem tiver acesso ao endereço publicado poderá ver as fotos e os textos. As fontes do Google têm alternativas locais caso não carreguem.
+
+## Adicionar mais memórias
+
+As primeiras quatro entradas de `photos` no `config.js` aparecem na abertura do álbum. Da quinta em diante, as fotos aparecem ao abrir **Ver mais memórias**. Basta adicionar novos objetos à mesma lista, com um `id` exclusivo (por exemplo `05`, `06`), `src`, `alt`, `caption` e `memory`. As fotos adicionais também abrem ampliadas e permitem editar a legenda. Se ainda não houver fotos extras, a seção mostra uma mensagem de páginas à espera de novas memórias.
+
+Exemplo de nova entrada, depois da quarta (separe os objetos com vírgula):
+
+```js
+{ id: '05', src: '/public/photos/nova-foto.jpg', alt: 'Descrição da foto', caption: 'Sua legenda', memory: 'Seu recadinho', art: 'flower' }
+```

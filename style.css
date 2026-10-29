@@ -28,3 +28,16 @@
 .photo-button .art-sun img,.dialog-photo .art-sun img{width:100%;height:100%;object-fit:contain}
 .first-date:after{content:'';width:42px;height:42px;background:url('/public/icons/sparkle.svg') center/contain no-repeat}
 @media(max-width:600px){.button-arrow{width:18px;height:18px}.sketch-sun{width:37px;height:37px}.art-sun{width:73px;height:73px}.first-date:after{width:42px;height:42px}}
+.more-memories{margin-top:38px;text-align:center}
+.more-memories summary{display:inline-flex;align-items:center;justify-content:center;gap:18px;min-height:46px;padding:12px 23px;border:1px solid #d9c58b;border-radius:5px;background:#f8efcf;cursor:pointer;list-style:none;font-size:12px;font-weight:500}
+.more-memories summary::-webkit-details-marker{display:none}
+.more-memories summary:hover{background:#f3e5b6}
+.more-memories summary:focus-visible{outline:3px solid #aa7c27;outline-offset:5px}
+.more-chevron{display:inline-block;font-size:20px;line-height:1;transition:transform .2s}
+.more-memories[open] .more-chevron{transform:rotate(180deg)}
+.more-pages{padding-top:25px}
+.more-intro,.more-empty{font-family:var(--hand);color:#928064;font-size:23px;line-height:1.5}
+.more-empty{padding:30px 18px;border:1px dashed #dbcead;border-radius:5px;background:#f8f2e4;margin:22px auto 0;max-width:580px}
+#more-photo-grid:empty{display:none}
+.more-pages .photo-grid{text-align:left;margin-top:34px}
+[hidden]{display:none!important}
