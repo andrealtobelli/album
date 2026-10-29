@@ -1,6 +1,6 @@
 # Nosso álbum 💛
 
-Site estático, sem dependências. Requer Node.js 20 ou superior.
+Site estático, sem dependências. O projeto configura Node.js 22 para o build na Vercel.
 
 ## Rodar localmente
 
@@ -18,6 +18,11 @@ As legendas também podem ser editadas diretamente no álbum. Essas alterações
 
 Execute `npm test` e `npm run build`. O resultado fica em `dist/`.
 
-Quando quiser publicar, envie o projeto para um repositório e importe na Vercel. Selecione o preset **Other**, comando de build `npm run build` e diretório de saída `dist` (já definidos em `vercel.json`). Também pode usar a CLI com `npx vercel` e, depois, `npx vercel --prod`.
+1. Envie os arquivos atualizados para o GitHub (`git add .`, `git commit -m "Prepara publicação na Vercel"` e `git push`).
+2. Na Vercel, escolha **Add New → Project** e importe o repositório.
+3. Deixe **Root Directory** na raiz do repositório. Use o preset **Other**, comando de build `npm run build` e diretório de saída `dist` (já definidos em `vercel.json`). Não é necessário configurar variáveis de ambiente.
+4. Clique em **Deploy**. Os próximos pushes na branch de produção atualizarão o site pela integração com o GitHub.
+
+Se preferir o terminal, execute `npx vercel` na pasta do projeto para uma prévia e `npx vercel --prod` para publicar em produção. O servidor local não precisa ficar ligado para o site publicado funcionar.
 
 O site não tem autenticação: quem tiver acesso ao endereço publicado poderá ver as fotos e os textos. As fontes do Google têm alternativas locais caso não carreguem.
